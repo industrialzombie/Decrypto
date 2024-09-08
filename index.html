@@ -83,7 +83,7 @@
 				  	e(
 					  	'div',
 					  	{ className: 'content' },
-				  		Word(
+				  		Card(
 					  	{
 					   		card: this.state.card
 				  		})
@@ -98,6 +98,16 @@
 		  			)
 		  		);
 			  }
+			}
+			
+			function Card(props) {
+				return e(
+					'div',
+					{
+						className: 'content-body'
+					},
+					props.card
+				);
 			}
 			
 			function NextButton(props) {
