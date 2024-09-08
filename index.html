@@ -46,27 +46,27 @@
 		
 		<script>
 
-			const cards= ['123', '124', '132', '134', '142', '143', '213', '214', '231', '234', '241', '243', '312', '314', '321', '324', '341', '342', '412', '413', '421', '423', '431', '432'];
+			const cards = ['123', '124', '132', '134', '142', '143', '213', '214', '231', '234', '241', '243', '312', '314', '321', '324', '341', '342', '412', '413', '421', '423', '431', '432'];
 			
 			const e = React.createElement;
 
 			class App extends React.Component {
-				constructor(props) {
-			  	super(props);
+		            constructor(props) {
+			        super(props);
 				
 		  		const card = this.pickCard();
 				
 			  	this.state = {
-				  	card: card
-					};
-			  }
+				    card: card
+				};
+			    }
 			  
-			  pickCard() {
+			    pickCard() {
 			  	const cardIndex = Math.floor(Math.random() * cards.length);
 		  		return cards[cardIndex];
-			  }
+			    }
 			  
-			  nextCard() {		  
+			    nextCard() {		  
 			  	var newCard = this.pickCard();
 			  	this.setState((state) => {
 			  		return {
@@ -74,9 +74,9 @@
 				  		card: newCard
 				  	};
 			  	);
-			  }
+			    }
 			  
-			  render() {
+			    render() {
 				return e(
 					'div',
 				        { className: 'content' },
@@ -97,7 +97,7 @@
 			 	  		})
 		  			)
 		  		);
-			  }
+			    }
 			}
 			
 			function Card(props) {
